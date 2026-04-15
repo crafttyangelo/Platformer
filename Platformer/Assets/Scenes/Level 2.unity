@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 785f4c67bdc9f6a408e449c97d94426d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Goal
-  level: Level 2
+  level: 
 --- !u!61 &1305481497
 BoxCollider2D:
   m_ObjectHideFlags: 0

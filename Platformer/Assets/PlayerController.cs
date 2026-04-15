@@ -8,8 +8,6 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    private Color player_color;
-
     private Vector2 velocity;
 
     private RaycastHit2D left_ground_check;
@@ -38,8 +36,6 @@ public class PlayerController : MonoBehaviour
     {
        rb = GetComponent<Rigidbody2D>();
 
-        // Store color of the player
-        player_color = GetComponent<SpriteRenderer>().color;
     }
 
     // Update is called once per frame
@@ -100,6 +96,8 @@ public class PlayerController : MonoBehaviour
         if (left_ground_check || right_ground_check)
         {
             velocity.y = 0;
+
+            // Fixes player position to set to ground
             ground_offset = Mathf.Max(left_ground_check.distance, right_ground_check.distance) - 0.5f;
 
             if(jump_check)
